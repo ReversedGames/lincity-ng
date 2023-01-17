@@ -10,6 +10,7 @@
 			"name": "vcpkg",
 			"displayName": "VCPKG preset",
 			"description": "Build project using VCPKG",
+			"binaryDir": "${sourceDir}/builds/${presetName}",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": {
 					"value": "${sourceDir}/mk/vcpkg/scripts/buildsystems/vcpkg.cmake",
@@ -21,6 +22,7 @@
 			"name": "ninja-multi-vcpkg",
 			"displayName": "VCPKG preset (Ninja Multi Config)",
 			"description": "Build project using VCPKG and Ninja (Multi Config)",
+			"binaryDir": "${sourceDir}/builds/${presetName}",
 			"generator": "Ninja Multi-Config",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": {
