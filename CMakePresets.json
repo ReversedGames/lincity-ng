@@ -44,6 +44,20 @@
 			"configurePreset": "vcpkg",
 			"displayName": "Build Default generator",
 			"description": "Build with default generator"
+		},
+		{
+			"name": "ninja-multi-vcpkg-package",
+			"configurePreset": "ninja-multi-vcpkg",
+			"displayName": "Build ninja-multi-vcpkg & package",
+			"description": "Build ninja-multi-vcpkg Configurations & package",
+			"targets": ["package"]
+		},
+		{
+			"name": "vcpkg-package",
+			"configurePreset": "vcpkg",
+			"displayName": "Build Default generator & package",
+			"description": "Build with default generator & package",
+			"targets": ["package"]
 		}
 	],
 	"testPresets": [

@@ -59,8 +59,12 @@ jobs:
         with:
           cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
           configurePreset: 'ninja-multi-vcpkg'
-          buildPreset: 'ninja-multi-vcpkg'
+          buildPreset: 'ninja-multi-vcpkg-package'
           buildPresetAdditionalArgs: '[`--config Release`]'
       - name: List $RUNNER_WORKSPACE after build
         run: find $RUNNER_WORKSPACE
         shell: bash
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.triplet }}
+          path: builds/ninja-multi-vcpkg/*.zip
