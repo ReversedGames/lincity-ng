@@ -1,0 +1,21 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 21,
+		"patch": 0
+	},
+	"configurePresets": [
+		{
+			"name": "vcpkg",
+			"displayName": "VCPKG preset",
+			"description": "Build project using VCPKG",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": {
+					"value": "${sourceDir}/mk/vcpkg/scripts/buildsystems/vcpkg.cmake",
+					"type": "FILEPATH"
+				}
+			}
+		}
+	]
+}
