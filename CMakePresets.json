@@ -16,6 +16,42 @@
 					"type": "FILEPATH"
 				}
 			}
+		},
+		{
+			"name": "ninja-multi-vcpkg",
+			"displayName": "VCPKG preset (Ninja Multi Config)",
+			"description": "Build project using VCPKG and Ninja (Multi Config)",
+			"generator": "Ninja Multi-Config",
+			"cacheVariables": {
+				"CMAKE_TOOLCHAIN_FILE": {
+					"value": "${sourceDir}/mk/vcpkg/scripts/buildsystems/vcpkg.cmake",
+					"type": "FILEPATH"
+				}
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "ninja-multi-vcpkg",
+			"configurePreset": "ninja-multi-vcpkg",
+			"displayName": "Build ninja-multi-vcpkg",
+			"description": "Build ninja-multi-vcpkg Configurations"
+		},
+		{
+			"name": "vcpkg",
+			"configurePreset": "vcpkg",
+			"displayName": "Build Default generator",
+			"description": "Build with default generator"
+		}
+	],
+	"testPresets": [
+		{
+			"name": "ninja-multi-vcpkg",
+			"configurePreset": "ninja-multi-vcpkg"
+		},
+		{
+			"name": "vcpkg",
+			"configurePreset": "vcpkg"
 		}
 	]
 }
