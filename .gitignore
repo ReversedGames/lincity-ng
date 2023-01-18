@@ -17,5 +17,4 @@
 # Temporary Files
 .*.swp
 
-.idea/
 vcpkg_installed/
